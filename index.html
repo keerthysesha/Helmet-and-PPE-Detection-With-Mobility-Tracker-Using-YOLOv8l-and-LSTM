@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safety Gear Detection</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Helmet and Safety Equipment Detector</h1>
+    <div class="container">
+        <div class="file-input">
+            <label for="file">Upload an image or video </label>
+            <input type="file" id="file" accept="image/*,video/*">
+            <button id="uploadButton">Upload</button>
+        </div>
+        <div class="result">
+            <h3>Results:</h3>
+            <div id="output"></div>
+            <img id="uploadedImage" alt="Uploaded Image Preview" style="display: none;">
+            <video id="uploadedVideo" controls style="display: none;"></video>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

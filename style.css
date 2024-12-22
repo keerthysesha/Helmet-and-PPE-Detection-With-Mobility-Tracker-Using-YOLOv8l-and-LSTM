@@ -1,0 +1,172 @@
+/* General Body Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #6c5ce7, #00b894)no-repeat;
+    color: #fff;
+    padding: 30px;
+    margin: 0;
+    height: 1100px;
+}
+
+/* Header Styling */
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    margin-bottom: 20px;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+/* Container Styling */
+.container {
+    background: #fff;
+    color: #333;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+/* File Input Styling */
+.file-input {
+    margin: 30px 0;
+}
+
+.file-input label {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #6c5ce7;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.file-input input {
+    font-size: 1rem;
+    padding: 10px;
+    border: 2px solid #6c5ce7;
+    border-radius: 8px;
+    background: #f4f4f9;
+    width: 80%;
+    margin: 0 auto;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.file-input input:hover {
+    border-color: #00b894;
+}
+
+/* Button Styling */
+button {
+    font-size: 1rem;
+    padding: 12px 24px;
+    border: none;
+    background-color: #6c5ce7;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #00b894;
+}
+
+/* Results Section */
+.result {
+    margin-top: 30px;
+}
+
+.result h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Image and Video Styling */
+img, video {
+    max-width: 100%; /* Ensures it doesn't exceed the container width */
+    max-height: 500px; /* Restricts the height to a specific value */
+    margin-top: 20px;
+    border-radius: 12px;
+    border: 3px solid #ddd;
+    object-fit: contain; /* Maintains aspect ratio without cropping */
+    display: block; /* Centers the content when combined with a parent flexbox or margin auto */
+    margin-left: auto; /* Centers horizontally */
+    margin-right: auto; /* Centers horizontally */
+}
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+        width: 90%;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .file-input input {
+        width: 100%;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Styling the container for the results (detected counts) */
+#output {
+    font-size: 1.1rem;
+    color: #333;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin-top: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    line-height: 1.6;
+    max-width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+/* Highlighting the count numbers */
+#output span .count {
+    font-weight: bolder;
+    color: #00b894; /* Green color for detected count values */
+}
+
+/* Style for error or empty results */
+#output.error {
+    background-color: #ffe6e6;
+    border-color: #ff4d4d;
+    color: #d60000;
+}
+
+#output.error span {
+    color: #d60000;
+}
+
+#output.success {
+    background-color: #e6ffed;
+    border-color: #00b894;
+    color: #006b3c;
+}
+
+#output.success span {
+    color: #006b3c;
+    font-weight: bolder;
+}
